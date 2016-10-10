@@ -32,7 +32,7 @@ submit.onclick = function()
 {
   
   var names = ['name1','name2','name3','name4'];
-  var data;
+  var data = '';
   for(var i = 0;i < names.length ; i++)
   {
       data += '<li>' + names[i] + '</li>';
