@@ -27,7 +27,8 @@ button.onclick = function(){
 //  Submit Name
 
 var list = document.getElementById('list');
-list.onclick = function()
+var submit = document.getElementById('submit-button')
+submit.onclick = function()
 {
   
   var names = ['name1','name2','name3','name4'];
