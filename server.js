@@ -5,6 +5,22 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var names = [];
+app.get('/search-name/:name',function (req, res) {
+   var name = req.query.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+});
+
+app.get('/counter', function (req, res) 
+{
+  counter = counter + 1;
+  res.send(counter.toString());  
+});
+
+
+
+
 var articles = 
 {
     
@@ -77,20 +93,6 @@ function createTemplate(data)
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-var names = [];
-app.get('/search-name/:name',function (req, res) {
-   var name = req.query.name;
-   names.push(name);
-   res.send(JSON.stringify(names));
-});
-
-app.get('/counter', function (req, res) 
-{
-  counter = counter + 1;
-  res.send(counter.toString());  
-});
-
 
  app.get('/:articleName', function (req, res) {
     // articleName = article-one
