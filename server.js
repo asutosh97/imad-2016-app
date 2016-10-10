@@ -85,18 +85,20 @@ app.get('/counter', function (req, res)
   res.send(counter.toString());  
 });
 
- app.get('/:articleName', function (req, res) {
-    // articleName = article-one
-    //articles[artickeName] --> {} contents of article one
-    var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-}); 
 var names = [];
 app.get('/search-name/:name',function (req, res) {
    var name = req.query.name;
    names.push(name);
    res.send(JSON.stringify(names));
 });
+
+
+ app.get('/:articleName', function (req, res) {
+    // articleName = article-one
+    //articles[artickeName] --> {} contents of article one
+    var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
+}); 
 
 var counter=0;
 
