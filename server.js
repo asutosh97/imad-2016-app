@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
+/*var articles = {
     
     'article-one' : {
 		title: 'Article One | Asutosh Sahoo',
@@ -67,24 +67,26 @@ function createTemplate(data){
 	</html>
 	`;
 	return htmlTemplate;
-}
+} */
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
+/* app.get('/:articleName', function (req, res) {
     // articleName = article-one
     //articles[artickeName] --> {} contents of article one
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
-});
+}); */
 
 var counter=0;
+
 app.get('/counter', function (req, res) {
   counter = counter + 1;
   res.send(counter.toString());  
 });
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
