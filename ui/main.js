@@ -27,15 +27,29 @@ button.onclick = function(){
 //  Submit Name
 
 var list = document.getElementById('list');
-var submit = document.getElementById('submit-button')
-submit.onclick = function()
-{
-  
-  var names = ['name1','name2','name3','name4'];
-  var data = '';
-  for(var i = 0;i < names.length ; i++)
-  {
-      data += '<li>' + names[i] + '</li>';
-  }
-  list.innerHTML = data;
+var submit = document.getElementById('submit-button');
+submit.onclick = function(){
+    
+    //  Make a request object
+    var request = new XMLHttpRequest();
+    //  Capture the response and store it in a variable
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            //  take some action
+            if(request.status === 200){
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var data = '';
+                for(var i = 0;i < names.length ; i++)
+                {
+                    data += '<li>' + names[i] + '</li>';
+                }
+                list.innerHTML = data;
+            }
+        }
+    }
+    //  Make the request
+    request.open('GET','http://asutosh97.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.send(null);
 };
