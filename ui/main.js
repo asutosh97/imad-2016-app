@@ -8,7 +8,8 @@ button.onclick = function(){
     var request = new XMLHttpRequest();
     //  Capture the response and store it in a variable
     request.onreadystatechange = function(){
-        if(request.readyState === XMLHttpRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
             //  take some action
             if(request.status === 200){
                 var counter = request.responseText;
@@ -25,3 +26,15 @@ button.onclick = function(){
 
 //  Submit Name
 
+var list = document.getElementById('list');
+list.onclick = function()
+{
+  
+  var names = ['name1','name2','name3','name4'];
+  var data;
+  for(var i = 0;i < names.length ; i++)
+  {
+      data += '<li>' + names[i] + '</li>';
+  }
+  list.innerHTML = data;
+};
