@@ -28,10 +28,10 @@ button.onclick = function(){
 
 var list = document.getElementById('list');
 var submit = document.getElementById('submit-button');
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 submit.onclick = function(){
-    
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     //  Make a request object
     var request = new XMLHttpRequest();
     //  Capture the response and store it in a variable
