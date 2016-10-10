@@ -21,3 +21,7 @@ button.onclick = function(){
     request.open('GET','http://asutosh97.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+
+//  Submit Name
+
