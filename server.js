@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var names = [];
 app.get('/submit-name',function (req, res) {
-   var name = req.query.name;
+   var name = req.query.state;
    names.push(name);
    res.send(JSON.stringify(names));
 });
