@@ -36,5 +36,5 @@ list.onclick = function()
   {
       data += '<li>' + names[i] + '</li>';
   }
-  list.innerHTML = data;
+  list.innerHTML = data.toString();
 };
