@@ -28,6 +28,8 @@ button.onclick = function(){
 
 var list = document.getElementById('list');
 var submit = document.getElementById('submit-button');
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
 submit.onclick = function(){
     
     //  Make a request object
