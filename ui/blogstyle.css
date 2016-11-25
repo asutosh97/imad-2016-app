@@ -38,7 +38,7 @@ body{
     background-color: lightblue;
     height:100%;
     opacity: 0.5;
-    position:fixed;
+    position:absolute;
 }
 
 #content {
