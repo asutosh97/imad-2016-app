@@ -11,15 +11,16 @@
 
     <style>
        #canvas-basic {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 850px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
     </style>
     </style>
     <script>
@@ -56,28 +57,27 @@
     <div class="container " >
 
 
-         <canvas id="canvas-basic"></canvas>
+        <canvas id="canvas-basic"></canvas>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
 
             var granimInstance = new Granim({
-            element: '#canvas-basic',
-            direction: 'left-right',
-            opacity: [1, 1],
-            isPausedWhenNotInView: true,
-            states : {
-              "default-state": {
-                  gradients: [
-                      ['#AA0768', '#61045F'],
-                      ['#02AAB0', '#00CDAC'],
-                      ['#DA22FF', '#9733EE']
-                  ]
-              }
-            }
-        });
+    element: '#canvas-basic',
+    name: 'basic-gradient',
+    direction: 'left-right',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#AA076B', '#61045F'],
+                ['#02AAB0', '#00CDAC'],
+                ['#DA22FF', '#9733EE']
+            ]
+        }
+    }
+});
         </script>
-
-
         <div id="navbar">
             <ul id="menulist">
                 <li class="nav"><a class="anchor" href="/">Home</a></li>
@@ -88,10 +88,9 @@
         </div>
         <div id="authorinfo">
             <div id="text">
-                <span> <strong>Hi, I am Abhilash</strong></span>
-                <p>An engineering student of Computer Science<br>engineering branch at IIIT Bhubaneswar.<br> Other than technical stuffs I love poetry<br>Drama, Indian culture etc.<br>There are many things to say<br>but one word which describes me is "CAPRICIOUS"
+                <span> <strong>Hi, I am Asutosh</strong></span>
+                <p>Currently in 2nd year,B.Tech in <br>Computer Science from <br> IIIT Bhubaneswar.<br><br>Passionate competitive coder & <br>an ardent physics lover.<br><br> Also I like to pen down my thoughts once a while.
                 </p>
-             <br>
              <br>
              <span>Here goes my <a class="anchor" href="https://drive.google.com/open?id=0BzubNf2lz3a9V3o4MHdUOWhUOU0" >My CV</a></span>
 

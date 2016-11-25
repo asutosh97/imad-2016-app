@@ -30,7 +30,7 @@ body {
 .container {
     background-color: pink;
     background-size: cover;
-    height: 850px;
+    height: 700px;
     width: 100%;
 }
 
@@ -63,7 +63,8 @@ body {
 
 
 #loginpage {
-    background-image: url("/ui/bc.jpeg");
+    background-color: #729f98;
+    /*background-image: url("/ui/bc.jpeg");*/
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
@@ -73,7 +74,7 @@ body {
 .anchor {
     color: white;
     text-decoration: none;
-    
+    font-family: 'Lato-Hairline', sans-serif;
     
 }
 .anchor:hover
@@ -141,7 +142,7 @@ body {
 }
 
 #contactme {
-    background-color:#02AAB0;
+    background-color:#5a5c51;
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
@@ -159,7 +160,7 @@ body {
     display: inline-block;
     width: 600px;
     height: 600px;
-    margin-top: 80px;
+    margin-top: 60px;
     background-color: gray;
     border-radius: 10%;
     margin-left: 15px;
@@ -173,6 +174,10 @@ body {
     margin-top: 30px;
     text-align: center;
     font-family:'Special Elite', cursive;
+}
+.stretch {
+    width:100%;
+    height:100%;
 }
 
 

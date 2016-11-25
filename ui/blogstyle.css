@@ -1,12 +1,12 @@
 body{
-    background-image: "blog-background.jpg";
+    background-image: url("blog-background.jpg");
 }
 
 #header {
     background-color: lightyellow;
     height: 115px;
     width: 100%;
-    opacity: 100;
+    opacity: 0.4;
     margin:0;
     position:fixed;
 }
