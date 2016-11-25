@@ -1,4 +1,6 @@
-
+body{
+    background-image: "blog-background.jpg";
+}
 
 #header {
     background-color: lightyellow;
