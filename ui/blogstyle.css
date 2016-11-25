@@ -6,8 +6,9 @@ body{
     background-color: lightyellow;
     height: 115px;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.8;
     margin:0;
+    position:fixed;
 }
 
 #home {
