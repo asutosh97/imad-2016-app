@@ -1,70 +1,125 @@
-<!doctype html>
 <html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-        <title>
-            Homepage
-        </title>
-        
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-              // Add smooth scrolling to all links
-              $("a").on('click', function(event) {
-            
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        Home
+    </title>
+    <link rel="stylesheet" type="text/css" href="/ui/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <script src="/ui/granim.min.js" charset="utf-8"></script>
+
+    <style>
+       #canvas-basic {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 850px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    </style>
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
-                  // Prevent default anchor click behavior
-                  event.preventDefault();
-            
-                  // Store hash
-                  var hash = this.hash;
-            
-                  // Using jQuery's animate() method to add smooth page scroll
-                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                  $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                  }, 800, function(){
-               
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                  });
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 600, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
                 } // End if
-              });
             });
+        });
     </script>
-    
-    
-    </head>
-    <body>
-        <div class="container">
-            <div class="center">
-                <img id="photo" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/14317628_1700445986944969_3652578836099346692_n.jpg?oh=e0c4a512b7fe0abc18bab94ac12b8105&oe=58A69D78" class="img-medium"/>
-            </div>
-            <hr/>
-            <h3>Personal</h3>
-            <div>
-                My name is Asutosh Sahoo
-            </div>
-            <hr/>
-            <h3>Professional</h3>
-            <div>
-                I am a student at IIIT Bhubaneswar
-            </div>
-            <hr/>
-            <div class="footer">
-                This button <button id="counter">Click Me!</button> has been clicked <span id="count">0</span> times.
-                <hr/>
-                <input type="text" id="name" placeholder="search"></input>
-                <input type="submit" id="submit-button" value="Submit"></input>
-                <ul id="list">
-                    
-                </ul>
-            </div>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
+   
+</head>
+
+<body>
+   
+    <div class="container " >
+
+
+         <canvas id="canvas-basic"></canvas>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+
+            var granimInstance = new Granim({
+            element: '#canvas-basic',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states : {
+              "default-state": {
+                  gradients: [
+                      ['#AA0768', '#61045F'],
+                      ['#02AAB0', '#00CDAC'],
+                      ['#DA22FF', '#9733EE']
+                  ]
+              }
+            }
+        });
         </script>
-    </body>
+
+
+        <div id="navbar">
+            <ul id="menulist">
+                <li class="nav"><a class="anchor" href="/">Home</a></li>
+                <li class="nav"><a class="anchor" href="/ui/blogtemp.html">MyBlog</a></li>
+                <li class="nav"><a class="anchor" href="#contactme">Contact Me</a></li>
+                <li class="nav"><a class="anchor" href="#loginpage">Login/Register</a></li>
+            </ul>
+        </div>
+        <div id="authorinfo">
+            <div id="text">
+                <span> <strong>Hi, I am Abhilash</strong></span>
+                <p>An engineering student of Computer Science<br>engineering branch at IIIT Bhubaneswar.<br> Other than technical stuffs I love poetry<br>Drama, Indian culture etc.<br>There are many things to say<br>but one word which describes me is "CAPRICIOUS"
+                </p>
+             <br>
+             <br>
+             <span>Here goes my <a class="anchor" href="https://drive.google.com/open?id=0BzubNf2lz3a9V3o4MHdUOWhUOU0" >My CV</a></span>
+
+
+            </div>
+
+            </div>
+    </div>
+    <div id="loginpage">
+
+        <div id="loginwindow">
+            <span>Username :</span><input type="text" id="username"><br> <br>
+            <span>Password :</span><input type="password" id="password"><br><br>
+            <span><input type="submit" value="Login" id="loginbtn" >      <span><input type="submit" value="Register" id="registerbtn"></span>
+            
+        </div>
+        <img id="loginimg" src="/ui/log.jpg">
+    </div>
+    <div id="contactme">
+        <div id="address">
+            <h2 style="text-decoration:underline"> Contact Me</h2>
+            <p style="color:black"> Asutosh Sahoo </p>
+            <a class="anchor" href=mailto:asutoshsahoo786@gmail.com/>Mail me</a></p>
+            <p style="color:black"> Contact me on <a class="anchor" href="http://wwww.facebook.com/100009387537113" target="_blank">Facebook </a></p>
+
+        </div>
+    </div>
+     <script type="text/javascript" src="/ui/main.js"></script>
+</body>
+
 </html>
