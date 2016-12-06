@@ -42,7 +42,7 @@ function createTemplate (data) {
 <body>
     <div id="header">
         <span id="home"><a class="anchor" href="/">Home</a></span>
-        <span id="myblog">Alluring Mind's Blog</span>
+        <span id="myblog">Alluring Minds Blog</span>
        <span  style="margin-left:45%; font-size:20px; font-family: 'Architects Daughter', cursive;" id="userinfo">
             <strong> Hi Guest !</strong>
         </span>
